@@ -1,34 +1,28 @@
-//função que vai verificar a estação do ano
-function verificarEstacao() {
-    //entrada de dados do usuário
-    let mes = window.prompt("Digite o nome de um mês do ano:");
+let estacao;
+let mostraResultado = document.querySelector(`#resultado`);
 
-    //transforma todas as letras em maiúsculas
-    mes = mes.toUpperCase();
+    function mes() {
+estacao = window.prompt("Digite o mês: ").toUpperCase()
 
-    //declara uma variável para armazenar a estação
-    let estacao = "";
+if (estacao == "JANEIRO" || estacao == "FEVEREIRO" || estacao == "DEZEMBRO") { 
+    mostraresultado.innerHTML = `<p>A estação é: Verão</p>`;
+    document.body.style.backgroundColor = "blue";
 
-    //verifica qual estação o mês pertence
-    if (mes == "DEZEMBRO" || mes == "JANEIRO" || mes == "FEVEREIRO") {
-        estacao = "Verão";
-        document.body.style.backgroundColor = "#FFD700"; // amarelo dourado
-    } else if (mes == "MARÇO" || mes == "ABRIL" || mes == "MAIO") {
-        estacao = "Outono";
-        document.body.style.backgroundColor = "#FF8C00"; // laranja escuro
-    } else if (mes == "JUNHO" || mes == "JULHO" || mes == "AGOSTO") {
-        estacao = "Inverno";
-        document.body.style.backgroundColor = "#87CEFA"; // azul claro
-    } else if (mes == "SETEMBRO" || mes == "OUTUBRO" || mes == "NOVEMBRO") {
-        estacao = "Primavera";
-        document.body.style.backgroundColor = "#98FB98"; // verde claro
-    } else {
-        alert("Mês inválido. Tente novamente.");
-        return;
+}
+
+if (estacao == "MARÇO" || estacao == "ABRIL" || estacao == "MAIO") {
+    mostraresultado.innerHTML = `<p>A estação é: Outono</p>`;
+    document.body.style.backgroundColor = "blue";
+
+}
+if (estacao == "JUNHO" || estacao == "JULHO" || estacao == "AGOSTO") {
+    mostraresultado.innerHTML = `<p>A estação é: Inverno</p>`;
+    document.body.style.backgroundColor = "blue";
+
+}
+if (estacao == "SETEMBRO" || estacao == "OUTUBRO" || estacao == "NOVEMBRO") {
+    mostraresultado.innerHTML = `<p>A estação é: Primavera</p>`;
+    document.body.style.backgroundColor = "blue";
+
     }
-
-    //mostra o resultado pro usuário
-    alert(`O mês de ${mes} pertence à estação: ${estacao}`);
-    document.getElementById("resultado").innerHTML = `<p>O mês de ${mes} pertence à estação: ${estacao}</p>`;
-
 }
