@@ -1,40 +1,82 @@
-//calculadoa simples com as 5 operações baica:
-//adição, subitração, multiplicação, divição.
+//calculadora simples com as 5 operações básicas:
+//adição,subtração,multiplicação,divisão e divisão com sobra;
 let num1;
 let num2;
-let resultado
+let resultado;
+
 function sobra() {
-    num1 = Number(window.prompt('Digite um numero:'));
-    num2 = Number(window.prompt('Digite outro numero:'));
+    num1 = Number(window.prompt("digite o primeiro número: "));
+    num2 = Number(window.prompt("digite o primeiro número: "));
 
     resultado = num1 % num2;
-    alert("O resultado é " + resultado + ".");
-}
-function multiplicacao() {
-    num1 = Number(window.prompt('Digite um numero:'));
-    num2 = Number(window.prompt('Digite outro numero:'));
+    numero = resultado % 2;
 
-    resultado = num1 * num2;
     alert("O resultado é " + resultado + ".");
+        if (numero == 0) {
+        alert ("Par");
+    }else {
+        alert ("impar")
+    }    
 }
-function adicao() {
-    num1 = Number(window.prompt('Digite um numero:'));
-    num2 = Number(window.prompt('Digite outro numero:'));
+function multiplicacao(){
+    num1 = Number(window.prompt("digite o primeiro número: "));
+    num2 = Number(window.prompt("digite o primeiro número: "));
+
+         resultado = num1 * num2;
+         numero = resultado % 2;
+        
+         alert("O resultado é " + resultado + ".");
+             if (numero == 0) {
+        alert ("Par");
+    }else {
+        alert ("impar")
+    }    
+}
+
+function divisao(){
+    num1 = Number(window.prompt("digite o primeiro número: "));
+    num2 = Number(window.prompt("digite o primeiro número: "));
+
+    resultado = num1 / num2;
+    numero = resultado % 2;
+
+    alert("O resultado é " + resultado + ".");
+        if (numero == 0) {
+        alert ("Par");
+    }else {
+        alert ("impar")
+    }    
+}
+
+function adicao(){
+    num1 = Number(window.prompt("digite o primeiro número: "));
+    num2 = Number(window.prompt("digite o primeiro número: "));
 
     resultado = num1 + num2;
+    numero = resultado % 2;
+
     alert("O resultado é " + resultado + ".");
+        if (numero == 0) {
+        alert ("Par");
+    }else {
+        alert ("impar")
+    }    
 }
-function subitracao() {
-    num1 = Number(window.prompt('Digite um numero:'));
-    num2 = Number(window.prompt('Digite outro numero:'));
+
+function subtracao(){
+    num1 = Number(window.prompt("digite o primeiro número: "));
+    num2 = Number(window.prompt("digite o primeiro número: "));
 
     resultado = num1 - num2;
-    alert("O resultado é " + resultado + ".");
-}
-function divicao() {
-    num1 = Number(window.prompt('Digite um numero:'));
-    num2 = Number(window.prompt('Digite outro numero:'));
+      numero = resultado % 2;
 
-    resultado = num1 + num2;
     alert("O resultado é " + resultado + ".");
+    if (numero == 0) {
+        alert ("Par");
+    }else {
+        alert ("impar")
+    }    
+        
 }
+
+
